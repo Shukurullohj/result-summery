@@ -35,8 +35,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     elStatsItemImg.width = "20";
     elStatsItemImg.height = "20";
 
-
-
     const elStatsItemTitle = document.createElement('span');
     elStatsItemTitle.classList.add('stats-list__item-title');
     elStatsItemTitle.textContent = item.category;
@@ -48,7 +46,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const elStatsItemPercentLabel = document.createElement('span');
     elStatsItemPercentLabel.classList.add('stats-list__item-percent-label');
     elStatsItemPercentLabel.textContent = "%";
-
 
     const elStatsItemMax = document.createElement('span');
     elStatsItemMax.classList.add('stats-list__item-max');
