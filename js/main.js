@@ -21,22 +21,3 @@ const data = [
   }
 ];
 
-document.addEventListener("DOMContentLoaded", function () {
-
-  const elStatsList = document.querySelector('.stats-list');
-  const elStatsContentFragment = document.createDocumentFragment();
-  const elStatsListItemTemplate = document.querySelector('#stats-list-item-template').content;
-
-  data.forEach(function (item) {
-    const elStatsItem = elStatsListItemTemplate.cloneNode(true);
-
-    elStatsItem.querySelector('.stats-list__item').classList.add(`stats-list__item--${item.category.toLowerCase()}`);
-    elStatsItem.querySelector('.stats-list__item-icon').src = item.icon;
-    elStatsItem.querySelector('.stats-list__item-title').textContent = item.category;
-    elStatsItem.querySelector('.stats-list__item-result').textContent = item.score;
-
-    elStatsContentFragment.appendChild(elStatsItem);
-  });
-
-  elStatsList.appendChild(elStatsContentFragment);
-});
